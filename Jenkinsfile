@@ -3,7 +3,7 @@ pipeline{
     agent any
     
     stages {
-        stage("Greeting test for the Shared Library") {
+        stage("Greeting test for the Shared Library.") {
             steps {
                 script {
                     Hello()
