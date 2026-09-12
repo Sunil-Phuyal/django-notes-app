@@ -40,6 +40,7 @@ pipeline{
         stage("Deploy"){
             steps{
                  echo "This is step for deploying the code"
+                // sh 'docker compose down'
                  sh 'docker compose pull django_app'
                  sh 'docker compose up -d --build'
             }
