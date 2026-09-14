@@ -25,6 +25,12 @@ pipeline{
                 }
             }
         }
+
+        stage("Trivy Scan"){
+    steps{
+        sh 'trivy image --exit-code 0 --severity HIGH,CRITICAL sunil714/notes-app:latest'
+    }
+}
         stage("Test"){
             steps{
                  echo "This is step for testing the code"
